@@ -37,7 +37,7 @@
 
 2. 配置.env文件：
    - 设置RPC_URL（BSC节点URL）
-   - 设置PRIVATE_KEY（钱包私钥，不带0x前缀）
+   - 设置PRIVATE_KEY（钱包私钥，带0x前缀）
    - 设置合约地址和其他参数
 
 3. 运行脚本：

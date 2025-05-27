@@ -256,7 +256,7 @@ def execute_swap():
             expected_amount = amounts_out[1]  # 第二个值是期望获得的BNB数量
             
             # 设置较大的滑点容忍度，增加成功率
-            amount_out_min = int(expected_amount * 0.95)  # 允许5%的滑点
+            amount_out_min = int(expected_amount * (1 - SLIPPAGE/100))  # 使用环境变量中设置的滑点
             logging.info(f"兑换估算 | 预期: {w3.from_wei(expected_amount, 'ether')} BNB | 最小: {w3.from_wei(amount_out_min, 'ether')} BNB")
         except Exception as e:
             logging.warning(f"计算滑点失败: {str(e)[:30]}...")

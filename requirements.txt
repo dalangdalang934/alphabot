@@ -1,0 +1,2 @@
+python-dotenv==1.1.0
+web3==7.12.0
